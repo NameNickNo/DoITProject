@@ -1,8 +1,8 @@
-package org.DoIT.util;
+package org.doit.util;
 
-import org.DoIT.dao.UserDao;
-import org.DoIT.model.User;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.doit.dao.UserDao;
+import org.doit.model.User;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
@@ -12,7 +12,7 @@ public class UserValidator implements Validator {
 
     private final UserDao userDao;
 
-    public UserValidator(UserDao userDao) {
+    public UserValidator(@Qualifier("userDaoJdbcTemplate") UserDao userDao) {
         this.userDao = userDao;
     }
 

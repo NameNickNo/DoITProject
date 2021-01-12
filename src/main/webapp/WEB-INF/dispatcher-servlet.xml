@@ -6,7 +6,7 @@
 
 
     <mvc:annotation-driven/>
-    <context:component-scan base-package="org.DoIT"/>
+    <context:component-scan base-package="org.doit"/>
     <import resource="persistence-config.xml"/>
 
     <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
